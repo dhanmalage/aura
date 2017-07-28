@@ -1,0 +1,356 @@
+/* http://www.whenalive.com/reset-css-clear-css-before-start-developing/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ******** reset css end ********* */
+
+
+/* *********** general css start *********** */
+html{
+    margin: 0;
+}
+
+body {
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #444;
+    text-rendering: optimizeLegibility;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+code, kbd, tt, var {
+    font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+a:link, a:visited {
+    color: #3a8bbb;
+    text-decoration: none;
+}
+
+a:active {
+    outline: none;
+}
+
+.clear {clear: both;}
+
+.background-white {
+    background-color: #fff;
+}
+
+.no-padding-left{padding-left: 0;}
+.no-padding-right{padding-right: 0;}
+
+.main-divider hr{
+    border: none;
+    border-top: 1px dotted #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+}
+
+header{
+    position: relative;
+}
+/* ******************* general css ends *********** */
+
+/* ****** navbar start ********* */
+#auro-bootstrap-menu{
+    position: absolute;
+    /*top: 44px;*/
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.65); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.65), rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.65), rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(255, 255, 0, 0)); /* Standard syntax */
+}
+#auro-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    margin-left: auto;
+    height: 100%;
+    margin-right: auto;
+}
+#auro-bootstrap-menu.navbar-default .navbar-brand img{
+    width: 150px;
+}
+#auro-bootstrap-menu.navbar-default .navbar-header span{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+#auro-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 0px;
+    margin-bottom: 0;
+    padding-bottom: 100px;
+}
+#auro-bootstrap-menu.navbar-default .navbar-nav>li{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#auro-bootstrap-menu.navbar-default .navbar-nav>li.active{
+    border-top: 3px #fff solid;
+}
+#auro-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+#auro-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#auro-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+}
+#auro-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#auro-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#auro-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+}
+#auro-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+#auro-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#auro-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+#auro-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: transparent;
+}
+#auro-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#auro-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: transparent;
+}
+.navbar-right{
+    margin-right: 60px;
+}
+/* *************** navbar end *************** */
+
+/* ************ header slider *********** */
+.header-carousel{
+    position: relative;
+    margin: 0;
+    z-index: 0;
+}
+.header-carousel-slide{
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* ************ header slider end *********** */
+
+/* ********** home page projects section ********** */
+.home-projects-wrap{
+    padding-top: 3px;
+}
+.home-projects-wrap:nth-child(1){padding-right: 3px;}
+.home-projects-wrap:nth-child(2){padding-right: 3px;}
+.home-project-item{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.home-project-item-content{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    text-align: center;
+    bottom: -100%;
+    color: #fff;
+    left: 0%;
+    position: absolute;
+    transition: bottom 0.5s ease;
+    width: 100%;
+}
+.home-project-item-content h2{
+    font-size: 18px;
+    color: #fff;
+    padding-top: 30px;
+}
+.home-project-item-content p{
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home-project-item-content a{
+    color: rgba(255, 255, 255, 0.65);
+    padding: 5px 10px 5px 10px;
+    border-top: 1px rgba(255, 255, 255, 0.4) solid;
+    border-right: 1px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 1px #fff solid;
+    border-left: 1px rgba(255, 255, 255, 0.4) solid;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.home-project-item:hover .home-project-item-content{
+    bottom: 0%;
+}
+/* ********** home page projects section end ********** */
+
+/* ********** home page main content ********* */
+.home-main-content{
+    margin-top: 40px;
+}
+.home-main-content h1{
+    font-size: 26px;
+    color: #171e4c;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.home-main-content p{
+    margin-bottom: 15px;
+    color: #777;
+}
+.twitter-sidebar{
+    margin-top: 40px;
+    background-color: #f3f3f3;
+}
+.twitter-sidebar h2{
+    font-size: 26px;
+    color: #171e4c;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.twitter-sidebar h2 i{
+    padding-left: 30px;
+}
+.twitter-sidebar iframe{
+    max-height: 450px !important;
+    padding-left: 15px !important;
+}
+/* ********** home page main content end ********* */
+
+/* ******* home page our clients ******** */
+.our-clients h3{
+    font-size: 26px;
+    color: #171e4c;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-left: 15px;
+    position: relative;
+}
+.our-clients .client-slider{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.our-clients .owl-prev{
+    position: absolute;
+    top: 23%;
+    left: -15px;
+    font-size: 48px;
+    color: #171e4c;
+}
+.our-clients .owl-next{
+    position: absolute;
+    top: 23%;
+    right: -15px;
+    font-size: 48px;
+    color: #171e4c;
+}
+/* ******* home page our clients end ******** */
+
+/* ********** footer css ********** */
+footer{
+    background-color: #171e4c;
+}
+footer .footer-col-1 .footer-logo-wrap img{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+}
+footer .footer-col-1 .footer-logo-wrap span{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+/* ********** footer css end ********** */
+
+/* **************** responsive *************** */
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 640px) {
+
+}
