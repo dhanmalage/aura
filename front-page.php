@@ -6,29 +6,35 @@
 ?>
     <div class="row-fluid">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding-right no-padding-left home-projects-wrap">
-            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide1.jpg);">
+            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/p1.jpg);">
                 <div class="home-project-item-content">
-                    <h2>Stratton Court, Cirencester</h2>
-                    <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
-                    <a href="javascript:void(0)">find out more</a>
+                    <div class="home-project-item-inner">
+                        <h2>Stratton Court, Cirencester</h2>
+                        <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
+                        <a href="javascript:void(0)">find out more</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding-right no-padding-left home-projects-wrap">
-            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide2.jpg);">
+            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/p2.jpg);">
                 <div class="home-project-item-content">
-                    <h2>Stratton Court, Cirencester</h2>
-                    <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
-                    <a href="javascript:void(0)">find out more</a>
+                    <div class="home-project-item-inner">
+                        <h2>Stratton Court, Cirencester</h2>
+                        <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
+                        <a href="javascript:void(0)">find out more</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding-right no-padding-left home-projects-wrap">
-            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);">
+            <div class="home-project-item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/p3.jpg);">
                 <div class="home-project-item-content">
-                    <h2>Stratton Court, Cirencester</h2>
-                    <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
-                    <a href="javascript:void(0)">find out more</a>
+                    <div class="home-project-item-inner">
+                        <h2>Stratton Court, Cirencester</h2>
+                        <p>Nested in the heart of the beautiful Cotswolds in stunning surroundings, where every last detail has been considered for your ultimate comfort, requirements.</p>
+                        <a href="javascript:void(0)">find out more</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,14 +97,14 @@
             jQuery(".twitter-timeline").contents().find(".Emoji--forText").attr("style", "display: none !important;");//Hides tweet text field border
             jQuery(".twitter-timeline").contents().find(".timeline-Tweet-brand").attr("style", "display: none !important;");//Hides tweet text field border
 
-            jQuery(".twitter-timeline").contents().find(".TweetAuthor-avatar").attr("style", "top: 7px !important;color: #777;");//Hides tweet text field border
+            jQuery(".twitter-timeline").contents().find(".TweetAuthor-avatar").attr("style", "top: 7px !important;color: #666;");//Hides tweet text field border
 
-            jQuery(".twitter-timeline").contents().find(".SandboxRoot.env-bp-430 .timeline-Tweet-text").attr("style", "font-size: 14px !important;color: #777;");//Hides tweet text field border
+            jQuery(".twitter-timeline").contents().find(".SandboxRoot.env-bp-430 .timeline-Tweet-text").attr("style", "font-size: 14px !important;color: #666;");//Hides tweet text field border
 
             jQuery(".twitter-timeline").contents().find(".Avatar--edge").attr("style", "border-radius: 0px !important;");//Hides tweet text field border
             jQuery(".twitter-timeline").contents().find(".timeline-Widget--edge").attr("style", "border-radius: 0px !important;");//Hides tweet text field border
 
-            jQuery(".twitter-timeline").contents().find(".timeline-Tweet").attr("style", "background-color: #f3f3f3 !important;padding-top: 15px !important;padding-bottom: 15px !important;");//Hides tweet text field border
+            jQuery(".twitter-timeline").contents().find(".timeline-Tweet").attr("style", "background-color: #ebebeb !important;padding-top: 15px !important;padding-bottom: 15px !important;");//Hides tweet text field border
             /*
             jQuery(".twitter-timeline").contents().find(".thm-dark .tweet-box-button").attr("style", "border-color:#000033 !important;");//Hides tweet text field border
 

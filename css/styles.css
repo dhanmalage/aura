@@ -1,8 +1,18 @@
-/* http://www.whenalive.com/reset-css-clear-css-before-start-developing/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/*
+Theme Name: AURO
+Theme URI: http://www.auro.com/
+Author: Dhananjaya Maha Malage
+Author URI: http://whenalive.com/
+Description: Wordpress Theme developed for AURO.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: auro
 
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -99,8 +109,99 @@ a:active {
 header{
     position: relative;
 }
+.no-background{
+    background: transparent;
+}
 /* ******************* general css ends *********** */
 
+/* ********* fade in animation ************ */
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* ******** fade in animation end ************* */
+/* ********* preloader ************* */
+.pre-loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 3;
+}
+.pre-loader-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.pre-loader-logo{
+    position: absolute;
+    top: 10%;
+    left: 6%;
+}
+.pre-loader-logo img{
+    max-width: 150px;
+}
+.pre-loader-logo span{
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.pre-loader-title{
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+}
+.pre-loader-title h2{
+    color: #fff;
+    font-size: 55px;
+    max-width: 450px;
+    line-height: 1;
+    font-weight: 100;
+    font-style: italic;
+    text-align: right;
+}
+.pre-loader-title button{
+    background: transparent;
+    color: #fff;
+    padding: 10px 60px;
+    border: 2px #fff solid;
+    margin-top: 30px;
+    float: right;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* *********** preloader end ********* */
 /* ****** navbar start ********* */
 #auro-bootstrap-menu{
     position: absolute;
@@ -191,10 +292,14 @@ header{
     z-index: 0;
 }
 .header-carousel-slide{
-    height: 500px;
+    /*height: 500px;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.inner-page-banner{
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /* ************ header slider end *********** */
 
@@ -205,7 +310,7 @@ header{
 .home-projects-wrap:nth-child(1){padding-right: 3px;}
 .home-projects-wrap:nth-child(2){padding-right: 3px;}
 .home-project-item{
-    height: 250px;
+    /*height: 250px;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -222,11 +327,16 @@ header{
     position: absolute;
     transition: bottom 0.5s ease;
     width: 100%;
+    display: table;
+}
+.home-project-item-inner{
+    display: table-cell;
+    vertical-align: middle;
 }
 .home-project-item-content h2{
     font-size: 18px;
     color: #fff;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
 }
 .home-project-item-content p{
     color: rgba(255, 255, 255, 0.65);
@@ -257,21 +367,26 @@ header{
 }
 .home-main-content h1{
     font-size: 26px;
-    color: #171e4c;
+    color: #253367;
     font-weight: 600;
     padding-top: 15px;
 }
 .home-main-content p{
     margin-bottom: 15px;
-    color: #777;
+    color: #666666;
 }
 .twitter-sidebar{
     margin-top: 40px;
-    background-color: #f3f3f3;
+    background-color: #ebebeb;
+    /* fade in animation */
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari and Chrome */
+    -o-animation: fadein 6s; /* Opera */
 }
 .twitter-sidebar h2{
     font-size: 26px;
-    color: #171e4c;
+    color: #253367;
     font-weight: 600;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -289,7 +404,7 @@ header{
 /* ******* home page our clients ******** */
 .our-clients h3{
     font-size: 26px;
-    color: #171e4c;
+    color: #253367;
     font-weight: 600;
     padding-top: 30px;
     padding-left: 15px;
@@ -305,20 +420,22 @@ header{
     top: 23%;
     left: -15px;
     font-size: 48px;
-    color: #171e4c;
+    color: #253367;
 }
 .our-clients .owl-next{
     position: absolute;
     top: 23%;
     right: -15px;
     font-size: 48px;
-    color: #171e4c;
+    color: #253367;
 }
 /* ******* home page our clients end ******** */
 
 /* ********** footer css ********** */
 footer{
-    background-color: #171e4c;
+    background-color: #253367;
+    padding-top: 20px;
+    padding-bottom: 35px;
 }
 footer .footer-col-1 .footer-logo-wrap img{
     width: 150px;
@@ -336,7 +453,222 @@ footer .footer-col-1 .footer-logo-wrap span{
     letter-spacing: 2px;
     margin-top: 10px;
 }
+
+footer .footer-col-1 .footer-social-icons ul{
+    list-style-type: none;
+    display: table;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+footer .footer-col-1 .footer-social-icons ul li{
+    display: table-cell;
+    padding: 0 15px 0 15px;
+}
+footer .footer-col-1 .footer-social-icons ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+}
+footer .footer-col-1 .footer-social-icons ul li a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+footer .footer-col-1 .footer-copyright p{
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+}
+footer .footer-col-2 .footer-enquire-now h4{
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+footer .footer-col-2 .footer-enquire-now .address{margin-top: 15px;}
+footer .footer-col-2 .footer-enquire-now .address ul li{color: #fff;}
+footer .footer-col-2 .footer-enquire-now .address ul li a{color: #fff;text-decoration: none;}
+footer .footer-col-2 .footer-enquire-now .address ul li a:hover{color: #fff;text-decoration: none;}
+footer .footer-col-2 .footer-enquire-now .tel{margin-top: 15px;}
+footer .footer-col-2 .footer-enquire-now .tel ul li{color: #fff;}
+footer .footer-col-2 .footer-enquire-now .tel ul li:nth-child(1){font-size: 18px;}
+footer .footer-col-2 .footer-enquire-now .tel ul li a{color: #fff;text-decoration: none;}
+footer .footer-col-2 .footer-enquire-now .tel ul li a:hover{color: #fff;text-decoration: none;}
+footer .footer-col-2 .footer-enquire-now .footer-nav{margin-top: 15px;}
+footer .footer-col-2 .footer-enquire-now .footer-nav .menu-footer-menu-container ul li{float: left;border-left: 1px #fff solid;padding-left: 10px;padding-right: 10px;}
+footer .footer-col-2 .footer-enquire-now .footer-nav .menu-footer-menu-container ul li:nth-child(1){border-left: 0;padding-left: 0;}
+footer .footer-col-2 .footer-enquire-now .footer-nav .menu-footer-menu-container ul li a{color: #fff;text-decoration: none;}
+footer .footer-col-2 .footer-enquire-now .footer-nav .menu-footer-menu-container ul li a:hover{color: #fff;text-decoration: none;}
+
+footer .footer-col-3 .footer-newsletter h4{
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+footer .footer-col-3 .footer-newsletter p{margin-top: 15px;color: #fff;}
+footer .footer-col-3 .footer-newsletter form{margin-top: 15px;}
+footer .footer-col-3 .footer-newsletter form .form-group{margin-bottom: 5px;}
+footer .footer-col-3 .footer-newsletter form input{border-radius: 0;}
+footer .footer-col-3 .footer-newsletter form button{
+    border-radius: 0;
+    margin-top: 5px;
+    padding: 10px 40px;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border: 1px rgba(255, 255, 255, 0.7) solid;
+}
+.footer-credit{
+    height: 80px;
+}
+.footer-credit p{
+    color: #666666;
+    padding: 15px 0;
+}
+.footer-question{
+    height: 80px;
+    position: relative;
+}
+.question-form-wrap{
+    background-color: #253367;
+    padding: 10px 5px 5px 5px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    border-top: 1px #fff solid;
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+}
+.question-form-wrap p{
+    color: #fff;
+    padding-left: 15px;
+}
+.question-form-wrap span{
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+.question-form{
+    display: none;
+}
+.question-form form input, .question-form form textarea, .question-form form button{
+    border-radius: 0;
+}
+.question-form form button{
+    border-radius: 0;
+    margin-top: 5px;
+    padding: 7px 20px;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border: 1px rgba(255, 255, 255, 0.7) solid;
+}
+.question-form form{
+    padding-bottom: 15px;
+}
 /* ********** footer css end ********** */
+
+/* ********** projects page ********** */
+.inner-page-title{
+    margin-top: 20px;
+}
+.inner-page-title h1{
+    font-size: 26px;
+    color: #253367;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.inner-page-content{
+    color: #666666;
+    margin-bottom: 30px;
+}
+.projects-main-height{
+    margin-bottom: 30px;
+}
+.projects-main-wrap{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.projects-main-inner{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    text-align: center;
+    bottom: -100%;
+    color: #fff;
+    left: 0%;
+    position: absolute;
+    transition: bottom 0.5s ease;
+    width: 100%;
+    display: table;
+}
+.projects-main-content{
+    display: table-cell;
+    vertical-align: middle;
+}
+.projects-main-inner h2{
+    font-size: 18px;
+    color: #fff;
+    /*padding-top: 30px;*/
+}
+.projects-main-inner p{
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.projects-main-inner a{
+    color: rgba(255, 255, 255, 0.65);
+    padding: 5px 10px 5px 10px;
+    border-top: 1px rgba(255, 255, 255, 0.4) solid;
+    border-right: 1px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 1px #fff solid;
+    border-left: 1px rgba(255, 255, 255, 0.4) solid;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.projects-main-wrap:hover .projects-main-inner{
+    bottom: 0%;
+}
+.project-main-desc{
+    background-color: #253367;
+    padding-bottom: 30px;
+}
+.project-main-desc h3{
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 0 15px 15px;
+}
+.project-main-desc p{
+    color: #fff;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 2;
+}
+.project-main-desc p span{
+    color: #80cde5;
+}
+/* ********** projects page end ********** */
+
+
+
+
+
+
 
 /* **************** responsive *************** */
 @media only screen and (max-width: 1200px) {

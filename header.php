@@ -14,6 +14,9 @@ Text Domain: auro
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+$cookie_name = "preloader";
+$cookie_value = "off";
+setcookie($cookie_name, $cookie_value, 0, "/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +46,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 </head>
 <body>
+<?php if(!isset($_COOKIE['preloader'])) { ?>
+<div class="pre-loader" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/preloader.jpg);">
+	<div class="pre-loader-inner">
+		<div class="pre-loader-logo">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+			<span>care construct</span>
+		</div>
+		<div class="pre-loader-title">
+			<h2>A class leading construction Co.</h2>
+			<button id="preloaderOff">Enter website</button>
+		</div>
+	</div>
+</div>
+<?php } ?>
 
 <?php get_template_part( 'template-parts/page-header', 'header' ); ?>
-
-
-
-

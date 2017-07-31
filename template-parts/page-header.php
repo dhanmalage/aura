@@ -12,7 +12,7 @@
             <nav id="auro-bootstrap-menu" class="navbar navbar-default " role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
                         <span>care construct</span>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                         </button>
@@ -32,11 +32,15 @@
                     ?>
                 </div>
             </nav> <!-- nav end -->
-            <div class="header-carousel owl-carousel owl-theme">
-                <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide1.jpg);"></div>
-                <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide2.jpg);"></div>
-                <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);"></div>
-            </div> <!-- header-carousel end -->
+            <?php if(is_front_page() || is_home()): ?>
+                <div class="header-carousel owl-carousel owl-theme">
+                    <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide1.jpg);"></div>
+                    <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide2.jpg);"></div>
+                    <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);"></div>
+                </div> <!-- header-carousel end -->
+            <?php else: ?>
+                <div class="inner-page-banner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);"></div>
+            <?php endif; ?>
         </div> <!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 end -->
     </div>
 </header>
