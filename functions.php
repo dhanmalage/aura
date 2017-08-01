@@ -1,6 +1,6 @@
 <?php
 
-function auro_setup() {
+function aura_setup() {
 
 	add_editor_style();
 
@@ -16,9 +16,9 @@ function auro_setup() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'auro_setup');
+add_action('after_setup_theme', 'aura_setup');
 
-function auro_scripts() {
+function aura_scripts() {
 	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css');
 	wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font-awesome.min.css');
 	wp_enqueue_style('owl-css', get_template_directory_uri().'/css/owl.carousel.min.css');
@@ -31,8 +31,11 @@ function auro_scripts() {
 	wp_enqueue_script('function', get_template_directory_uri().'/js/functions.js', array('jquery'), '', true);
 }
 
-add_action('wp_enqueue_scripts', 'auro_scripts');
+add_action('wp_enqueue_scripts', 'aura_scripts');
 
 // Register Custom Navigation Walker
 require_once('inc/wp-bootstrap-navwalker.php');
+
+// Register aura custom post-types
+require_once('inc/custom-post-types.php');
 
