@@ -588,6 +588,12 @@ footer .footer-col-3 .footer-newsletter form button{
     color: #666666;
     margin-bottom: 30px;
 }
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 /* ************* page php end *********** */
 /* ********** projects page ********** */
 .projects-main-height{
@@ -667,7 +673,7 @@ footer .footer-col-3 .footer-newsletter form button{
 /* ********** 404 page *************** */
 .not-found-content{
     text-align: center;
-    margin-top: 200px;
+    margin-top: -200px;
     margin-bottom: 80px;
 }
 .not-found-content h2{

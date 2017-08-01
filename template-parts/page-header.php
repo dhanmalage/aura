@@ -48,7 +48,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
                     <div class="header-carousel-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);"></div>
                 </div> <!-- header-carousel end -->
             <?php else: ?>
-                <div class="inner-page-banner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slide3.jpg);"></div>
+                <?php
+                    global $post;
+                    if ( has_post_thumbnail() ) {
+                        // First retrive Image ID by Post ID from get_post_thumbnail_id()
+                        $attachment_id  = get_post_thumbnail_id($post->ID);
+                        // Image url
+                        $image_url    = wp_get_attachment_image_src($attachment_id,'full', false);
+                    }
+                ?>
+                <div class="inner-page-banner" style="background-image: url(<?php echo $image_url[0]; ?>);"></div>
             <?php endif; ?>
         </div> <!-- col-xs-12 col-sm-12 col-md-12 col-lg-12 end -->
     </div>
